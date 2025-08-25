@@ -1,6 +1,5 @@
 import {
   ExportImageIcon,
-  GithubIcon,
   OpenFileIcon,
   SaveFileIcon,
   TrashIcon,
@@ -33,9 +32,9 @@ export const SaveToFile = () => {
         saveAsJSON(board);
       }}
       icon={SaveFileIcon}
-      aria-label={`${`保存文件`}`}
+      aria-label={`${`Save File`}`}
       shortcut={`Cmd+S`}
-    >{`保存文件`}</MenuItem>
+    >{`Save File`}</MenuItem>
   );
 };
 SaveToFile.displayName = 'SaveToFile';
@@ -67,8 +66,8 @@ export const OpenFile = () => {
         });
       }}
       icon={OpenFileIcon}
-      aria-label={`${`打开`}`}
-    >{`打开`}</MenuItem>
+      aria-label={`${`Open`}`}
+    >{`Open`}</MenuItem>
   );
 };
 OpenFile.displayName = 'OpenFile';
@@ -95,7 +94,7 @@ export const SaveAsImage = () => {
             onSelect={() => {
               saveAsImage(board, true);
             }}
-            aria-label={'透明背景'}
+            aria-label={'Transparent Background'}
           >
             PNG
           </MenuItem>
@@ -103,7 +102,7 @@ export const SaveAsImage = () => {
             onSelect={() => {
               saveAsImage(board, false);
             }}
-            aria-label={'白色背景'}
+            aria-label={'White Background'}
           >
             JPG
           </MenuItem>
@@ -112,7 +111,7 @@ export const SaveAsImage = () => {
       shortcut={`Cmd+Shift+E`}
       aria-label={''}
     >
-      {'导出图片'}
+      {'Export Image'}
     </MenuItem>
   );
 };
@@ -131,23 +130,11 @@ export const CleanBoard = () => {
         });
       }}
       shortcut={`Cmd+Backspace`}
-      aria-label={'清除画布'}
+      aria-label={'Clear Canvas'}
     >
-      {'清除画布'}
+      {'Clear Canvas'}
     </MenuItem>
   );
 };
 CleanBoard.displayName = 'CleanBoard';
 
-export const Socials = () => {
-  return (
-    <MenuItemLink
-      icon={GithubIcon}
-      href="https://github.com/plait-board/drawnix"
-      aria-label="GitHub"
-    >
-      GitHub
-    </MenuItemLink>
-  );
-};
-Socials.displayName = 'Socials';

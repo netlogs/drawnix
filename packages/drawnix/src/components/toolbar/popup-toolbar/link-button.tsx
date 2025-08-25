@@ -31,7 +31,7 @@ export const PopupLinkButton: React.FC<PopupLinkButtonProps> = ({
         const editor = getFirstTextEditor(pbElement);
         const linkElementEntry = LinkEditor.getLinkElement(editor);
         if (!linkElementEntry) {
-          LinkEditor.wrapLink(editor, '链接', '');
+          LinkEditor.wrapLink(editor, 'Link', '');
         }
         setTimeout(() => {
           const linkElementEntry = LinkEditor.getLinkElement(editor);

@@ -22,12 +22,12 @@ export const ThemeToolbar = () => {
         }}
         value={theme.themeColorMode}
       >
-        <option value="default">默认</option>
-        <option value="colorful">缤纷</option>
-        <option value="soft">柔和</option>
-        <option value="retro">复古</option>
-        <option value="dark">暗夜</option>
-        <option value="starry">星空</option>
+        <option value="default">Default</option>
+        <option value="colorful">Colorful</option>
+        <option value="soft">Soft</option>
+        <option value="retro">Retro</option>
+        <option value="dark">Dark</option>
+        <option value="starry">Starry</option>
       </select>
     </Island>
   );

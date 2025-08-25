@@ -29,8 +29,8 @@ export const ZoomToolbar = () => {
           type="button"
           icon={ZoomOutIcon}
           visible={true}
-          title={`缩小 — Cmd+-`}
-          aria-label={`缩小 — Cmd+-`}
+          title={`Zoom Out — Cmd+-`}
+          aria-label={`Zoom Out — Cmd+-`}
           onPointerUp={() => {
             BoardTransforms.updateZoom(board, board.viewport.zoom - 0.1);
           }}
@@ -47,8 +47,8 @@ export const ZoomToolbar = () => {
           <PopoverTrigger asChild>
             <div
               key={1}
-              title={`自适应`}
-              aria-label={`自适应`}
+              title={`Fit to Screen`}
+              aria-label={`Fit to Screen`}
               className={classNames('zoom-menu-trigger', {
                 active: zoomMenuOpen,
               })}
@@ -70,17 +70,17 @@ export const ZoomToolbar = () => {
                 onSelect={() => {
                   BoardTransforms.fitViewport(board);
                 }}
-                aria-label={`${`自适应缩放`}`}
+                aria-label={`${`Fit to Screen`}`}
                 shortcut={`Cmd+Shift+=`}
-              >{`自适应缩放`}</MenuItem>
+              >{`Fit to Screen`}</MenuItem>
               <MenuItem
                 data-testid="open-button"
                 onSelect={() => {
                   BoardTransforms.updateZoom(board, 1);
                 }}
-                aria-label={`${`缩放至 100%`}`}
+                aria-label={`${`Zoom to 100%`}`}
                 shortcut={`Cmd+0`}
-              >{`缩放至 100%`}</MenuItem>
+              >{`Zoom to 100%`}</MenuItem>
             </Menu>
           </PopoverContent>
         </Popover>
@@ -89,8 +89,8 @@ export const ZoomToolbar = () => {
           type="button"
           icon={ZoomInIcon}
           visible={true}
-          title={`放大 — Cmd++`}
-          aria-label={`放大 — Cmd++`}
+          title={`Zoom In — Cmd++`}
+          aria-label={`Zoom In — Cmd++`}
           onPointerUp={() => {
             BoardTransforms.updateZoom(board, board.viewport.zoom + 0.1);
           }}

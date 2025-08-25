@@ -53,7 +53,7 @@ const MermaidToDrawnix = () => {
         });
       } catch (err) {
         console.error('Failed to load mermaid library:', err);
-        setError(new Error('加载 Mermaid 库失败'));
+        setError(new Error('Failed to load Mermaid library'));
       }
     };
     loadLib();
