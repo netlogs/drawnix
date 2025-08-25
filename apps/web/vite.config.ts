@@ -9,7 +9,8 @@ export default defineConfig({
 
   server: {
     port: 7200,
-    host: 'localhost',
+    host: process.env.VITE_HOST || '0.0.0.0',
+    allowedHosts: process.env.VITE_ALLOWED_HOSTS ? process.env.VITE_ALLOWED_HOSTS.split(',') : ['draw.cepistle.com', 'localhost'],
   },
 
   preview: {
