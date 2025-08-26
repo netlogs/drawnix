@@ -1,7 +1,7 @@
 import { PlaitElement, Viewport } from '@plait/core';
 
 export interface DrawnixExportedData {
-  type: DrawnixExportedType.drawnix;
+  type: DrawnixExportedType.boardnow;
   version: number;
   source: 'web';
   elements: PlaitElement[];
@@ -9,5 +9,5 @@ export interface DrawnixExportedData {
 }
 
 export enum DrawnixExportedType {
-    drawnix = 'drawnix'
+    boardnow = 'boardnow'
 }

@@ -15,23 +15,23 @@ export const saveAsJSON = async (
 ) => {
   const serialized = serializeAsJSON(board);
   const blob = new Blob([serialized], {
-    type: MIME_TYPES.drawnix,
+    type: MIME_TYPES.boardnow,
   });
 
   const fileHandle = await fileSave(blob, {
     name,
-    extension: 'drawnix',
-    description: 'Drawnix file',
+    extension: 'boardnow',
+    description: 'BoardNow file',
   });
   return { fileHandle };
 };
 
 export const loadFromJSON = async (board: PlaitBoard) => {
   const file = await fileOpen({
-    description: 'Drawnix files',
+    description: 'BoardNow files',
     // ToDo: Be over-permissive until https://bugs.webkit.org/show_bug.cgi?id=34442
-    // gets resolved. Else, iOS users cannot open `.drawnix` files.
-    // extensions: ["json", "drawnix", "png", "svg"],
+    // gets resolved. Else, iOS users cannot open `.boardnow` files.
+    // extensions: ["json", "boardnow", "png", "svg"],
   });
   return loadFromBlob(board, await normalizeFile(file));
 };
@@ -39,7 +39,7 @@ export const loadFromJSON = async (board: PlaitBoard) => {
 export const isValidDrawnixData = (data?: any): data is DrawnixExportedData => {
   return (
     data &&
-    data.type === DrawnixExportedType.drawnix &&
+    data.type === DrawnixExportedType.boardnow &&
     Array.isArray(data.elements) &&
     typeof data.viewport === 'object'
   );
@@ -47,7 +47,7 @@ export const isValidDrawnixData = (data?: any): data is DrawnixExportedData => {
 
 export const serializeAsJSON = (board: PlaitBoard): string => {
   const data = {
-    type: DrawnixExportedType.drawnix,
+    type: DrawnixExportedType.boardnow,
     version: VERSIONS.drawnix,
     source: 'web',
     elements: board.children,

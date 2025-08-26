@@ -44,7 +44,7 @@ export const IMAGE_MIME_TYPES = {
 
 export const MIME_TYPES = {
   json: 'application/json',
-  drawnix: 'application/vnd.drawnix+json',
+  boardnow: 'application/vnd.boardnow+json',
   // image
   ...IMAGE_MIME_TYPES,
 } as const;
