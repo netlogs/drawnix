@@ -26,25 +26,25 @@ export interface MarkdownToDrawnixLibProps {
   }>;
 }
 
-const MARKDOWN_EXAMPLE = `# 我开始了
+const MARKDOWN_EXAMPLE = `# Getting Started
 
-- 让我看看是谁搞出了这个 bug 🕵️ ♂️ 🔍
+- Let me see who created this bug 🕵️ ♂️ 🔍
   - 😯 💣
-    - 原来是我 👈 🎯 💘
+    - Oh, it was me 👈 🎯 💘
 
-- 竟然不可以运行，为什么呢 🚫 ⚙️ ❓
-  - 竟然可以运行了，为什么呢？🎢 ✨
+- Why can't it run 🚫 ⚙️ ❓
+  - Wait, now it works. Why?🎢 ✨
     - 🤯 ⚡ ➡️ 🎉
 
-- 能运行起来的 🐞 🚀
-  - 就不要去动它 🛑 ✋
+- If it works 🐞 🚀
+  - Don't touch it 🛑 ✋
     - 👾 💥 🏹 🎯
     
-## 男孩还是女孩 👶 ❓ 🤷 ♂️ ♀️
+## Boy or Girl 👶 ❓ 🤷 ♂️ ♀️
 
 ### Hello world 👋 🌍 ✨ 💻
 
-#### 哇 是个程序员 🤯 ⌨️ 💡 👩 💻`;
+#### Wow, it's a programmer 🤯 ⌨️ 💡 👩 💻`;
 
 const MarkdownToDrawnix = () => {
   const { appState, setAppState } = useDrawnix();
@@ -67,7 +67,7 @@ const MarkdownToDrawnix = () => {
         });
       } catch (err) {
         console.error('Failed to load mermaid library:', err);
-        setError(new Error('加载 Mermaid 库失败'));
+        setError(new Error('Failed to load Mermaid library'));
       }
     };
     loadLib();
@@ -130,10 +130,10 @@ const MarkdownToDrawnix = () => {
 
   return (
     <TTDDialogPanels>
-        <TTDDialogPanel label={'Markdown 语法'}>
+        <TTDDialogPanel label={'Markdown Syntax'}>
           <TTDDialogInput
             input={text}
-            placeholder={'在此处编写 Markdown 文本定义...'}
+            placeholder={'Write Markdown text definition here...'}
             onChange={(event) => setText(event.target.value)}
             onKeyboardSubmit={() => {
               // insertToBoard();
@@ -141,12 +141,12 @@ const MarkdownToDrawnix = () => {
           />
         </TTDDialogPanel>
         <TTDDialogPanel
-          label={'预览'}
+          label={'Preview'}
           panelAction={{
             action: () => {
               insertToBoard();
             },
-            label: '插入',
+            label: 'Insert',
           }}
           renderSubmitShortcut={() => <TTDDialogSubmitShortcut />}
         >

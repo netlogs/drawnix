@@ -125,37 +125,37 @@ const MermaidToDrawnix = () => {
   return (
     <>
       <div className="ttd-dialog-desc">
-        目前仅支持
+        Currently supports
         <a
           href="https://mermaid.js.org/syntax/flowchart.html"
           target="_blank"
           rel="noreferrer"
         >
-          流程图
+          flowcharts
         </a>
-        、
+        ,
         <a
           href="https://mermaid.js.org/syntax/sequenceDiagram.html"
           target="_blank"
           rel="noreferrer"
         >
-          序列图
+          sequence diagrams
         </a>
-        和
+        , and
         <a
           href="https://mermaid.js.org/syntax/classDiagram.html"
           target="_blank"
           rel="noreferrer"
         >
-          类图
+          class diagrams
         </a>
-        。其他类型在 Drawnix 中将以图片呈现。
+        . Other types will be rendered as images in Drawnix.
       </div>
       <TTDDialogPanels>
-        <TTDDialogPanel label={'Mermaid 语法'}>
+        <TTDDialogPanel label={'Mermaid Syntax'}>
           <TTDDialogInput
             input={text}
-            placeholder={'在此处编写 Mermaid 图表定义...'}
+            placeholder={'Write Mermaid diagram definition here...'}
             onChange={(event) => setText(event.target.value)}
             onKeyboardSubmit={() => {
               insertToBoard();
@@ -163,12 +163,12 @@ const MermaidToDrawnix = () => {
           />
         </TTDDialogPanel>
         <TTDDialogPanel
-          label={'预览'}
+          label={'Preview'}
           panelAction={{
             action: () => {
               insertToBoard();
             },
-            label: '插入',
+            label: 'Insert',
           }}
           renderSubmitShortcut={() => <TTDDialogSubmitShortcut />}
         >
