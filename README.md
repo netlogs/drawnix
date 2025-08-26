@@ -138,3 +138,10 @@ docker pull pubuzhixing/drawnix:latest
 ## License
 
 [MIT License](https://github.com/plait-board/drawnix/blob/master/LICENSE)  
+
+1. 在白板中画好你想要的默认内容
+  2. 打开浏览器开发者工具
+  3. 在 Console 中运行：localStorage.clear(); indexedDB.deleteDatabase('Drawnix')
+  4. 刷新页面，会看到你设计的内容
+  5. 再次打开 Console，运行：copy(JSON.stringify(你的内容))
+  6. 将输出的 JSON 替换到 initializeData 数组中

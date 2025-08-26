@@ -78,7 +78,7 @@
     }
     .theme-toolbar {
         position: absolute;
-        bottom: 36px;
+        top: 100px;
         right: 36px;
         @include isMobile {
             display: none;
