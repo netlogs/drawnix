@@ -14,8 +14,8 @@ export const MermaidToDrawnixItem = () => {
         });
       }}
       icon={MermaidLogoIcon}
-      aria-label={`${`Mermaid to Drawnix`}`}
-    >{`Mermaid to Drawnix`}</MenuItem>
+      aria-label={`${`Mermaid to FlowCharts`}`}
+    >{`Mermaid to FlowCharts`}</MenuItem>
   );
 };
 
@@ -33,8 +33,8 @@ export const MarkdownToDrawnixItem = () => {
         });
       }}
       icon={MarkdownLogoIcon}
-      aria-label={`${`Markdown to Drawnix`}`}
-    >{`Markdown to Drawnix`}</MenuItem>
+      aria-label={`${`Markdown to MindMap`}`}
+    >{`Markdown to MindMap`}</MenuItem>
   );
 };
 
